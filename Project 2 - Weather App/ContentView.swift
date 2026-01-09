@@ -117,7 +117,7 @@ struct WeeklyRowView: View {
                 Text(dayNames[myIndex])
                     .fontWeight(.bold)
                     .font(.title2)
-                    .frame(maxWidth: 80, alignment: .leading)
+                    .frame(width: 80, alignment: .leading)
                     .frame(height: 40, alignment: .center)
                     .padding(.leading, 10)
             
@@ -126,7 +126,7 @@ struct WeeklyRowView: View {
     func createWeeklySymbolsView(myIndex: Int) -> some View {
         HStack {
                 createSymbol(symbol: weeklySymbols[myIndex])
-                    .frame(maxWidth: 80, alignment: .leading)
+                    .frame(width: 50, alignment: .center)
                     .frame(height: 40, alignment: .center)
 
         }
@@ -154,13 +154,13 @@ struct WeeklyRowView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color(red: 0/255.0, green: 100/255.0, blue: 220/255.0))
-                    .frame(width: 100, height: 10)
+                    .frame(width: 100, height: 6)
 
             HStack {
                 RoundedRectangle(cornerRadius: 25)
                     .fill(Color(red: 98/255.0, green: 178/255.0, blue: 240/255.0))
                         .frame(width: CGFloat.random(in: 20...60))
-                        .frame(height: 10)
+                        .frame(height: 6)
                         .padding(.trailing, CGFloat.random(in: 0...50))
                         .frame(maxWidth: 100)
             }
